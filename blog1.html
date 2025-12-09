@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en" data-theme="parchment">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Blog is under construction." />
+    <title>Blog | Under Construction</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      /* Minimal add-on, uses your existing theme tokens */
+      .hold {
+        min-height: calc(100vh - 66px);
+        display: grid;
+        place-items: center;
+        padding: 54px 0 70px;
+      }
+
+      .hold-card {
+        width: min(760px, 100%);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hold-card::before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        pointer-events: none;
+        background:
+          radial-gradient(520px 280px at 20% 0%, color-mix(in srgb, var(--accent2) 65%, transparent), transparent 60%),
+          radial-gradient(520px 280px at 85% 70%, color-mix(in srgb, var(--accent2) 55%, transparent), transparent 62%);
+        opacity: 0.9;
+      }
+
+      .hold-inner {
+        position: relative;
+        padding: 22px;
+      }
+
+      .hold-kicker {
+        margin: 0 0 10px;
+        color: var(--faint);
+        font-size: 12px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .hold-title {
+        margin: 0 0 10px;
+        font-family: var(--serif);
+        font-size: clamp(28px, 3.2vw, 44px);
+        letter-spacing: -0.04em;
+        line-height: 1.08;
+      }
+
+      .hold-lead {
+        margin: 0 0 14px;
+        color: var(--muted);
+        max-width: 72ch;
+        font-size: 16px;
+      }
+
+      .hold-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        margin-top: 14px;
+      }
+
+      .hold-stamp {
+        margin-top: 14px;
+      }
+
+      .hold-note {
+        margin-top: 14px;
+      }
+
+      .hold-ornament {
+        position: absolute;
+        right: 18px;
+        top: 18px;
+        width: 48px;
+        height: 48px;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background: color-mix(in srgb, var(--paper2) 90%, var(--accent2));
+        display: grid;
+        place-items: center;
+        color: var(--accent);
+        box-shadow: var(--shadow);
+      }
+
+      .hold-ornament svg {
+        width: 22px;
+        height: 22px;
+        opacity: 0.9;
+      }
+
+      @media (max-width: 520px) {
+        .hold-inner { padding: 18px; }
+        .hold-ornament { display: none; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar" id="topbar">
+      <div class="wrap topbar-inner">
+        <a class="seal" href="index.html" aria-label="Home">
+          <span class="seal-mark" aria-hidden="true"></span>
+          <span class="seal-text">Narayan Shanku</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            aria-label="Open menu"
+            aria-controls="navMenu"
+            aria-expanded="false"
+          >
+            <span class="toggle-lines" aria-hidden="true"></span>
+          </button>
+
+          <div class="nav-menu" id="navMenu">
+            <a class="nav-link" href="index.html">Home</a>
+            
+            <a class="nav-link is-active" href="blog1.html">Blog</a>
+
+
+            <button class="mode" id="modeBtn" type="button" aria-label="Toggle theme">
+              <span class="seal-mark" aria-hidden="true"></span>
+              <span class="mode-text">Mode</span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="wrap">
+      <section class="hold">
+        <article class="card hold-card reveal">
+          <div class="hold-inner">
+            <div class="hold-ornament" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v3"></path>
+                <path d="M19 10h-3"></path>
+                <path d="M8 10H5"></path>
+                <path d="M12 21v-3"></path>
+                <path d="M16.5 7.5l-2 2"></path>
+                <path d="M9.5 14.5l-2 2"></path>
+                <path d="M7.5 7.5l2 2"></path>
+                <path d="M14.5 14.5l2 2"></path>
+                <circle cx="12" cy="12" r="3.5"></circle>
+              </svg>
+            </div>
+
+            <p class="hold-kicker">Section V</p>
+            <h1 class="hold-title">Blog is under construction</h1>
+            <p class="hold-lead">
+              This space is being built. Posts on .NET, SQL, BI, and data engineering are on the way.
+              For now, the site is focusing on projects and proof of work.
+            </p>
+
+            <div class="hold-row">
+              <a class="btn ink" href="index.html#projects">View Projects</a>
+              <a class="btn line" href="index.html#contact">Contact</a>
+            </div>
+
+            <div class="stamp hold-stamp" aria-label="Status">
+              <span class="stamp-ink">COMING SOON</span>
+            </div>
+
+            <div class="note hold-note">
+              <span class="note-dot" aria-hidden="true"></span>
+              <p class="note-text">If you came here for writing, blame my schedule. If you came here to judge, fair.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-inner">
+        <p class="foot-text">© <span id="year"></span> Narayan Shanku</p>
+        <a class="foot-link" href="#topbar">Back to top</a>
+      </div>
+    </footer>
+
+    <script>
+      const topbar = document.getElementById("topbar");
+      const navToggle = document.getElementById("navToggle");
+      const navMenu = document.getElementById("navMenu");
+      const modeBtn = document.getElementById("modeBtn");
+      const year = document.getElementById("year");
+
+      year.textContent = new Date().getFullYear();
+
+      const elevate = () => {
+        if (window.scrollY > 6) topbar.classList.add("is-elevated");
+        else topbar.classList.remove("is-elevated");
+      };
+      elevate();
+      window.addEventListener("scroll", elevate, { passive: true });
+
+      navToggle?.addEventListener("click", () => {
+        const open = navMenu.classList.toggle("is-open");
+        navToggle.setAttribute("aria-expanded", String(open));
+      });
+
+      modeBtn?.addEventListener("click", () => {
+        const html = document.documentElement;
+        const t = html.getAttribute("data-theme") || "parchment";
+        html.setAttribute("data-theme", t === "ink" ? "parchment" : "ink");
+      });
+
+      const revealEls = document.querySelectorAll(".reveal");
+      const io = new IntersectionObserver(
+        (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("is-visible")),
+        { threshold: 0.12 }
+      );
+      revealEls.forEach((el) => io.observe(el));
+    </script>
+  </body>
+</html>

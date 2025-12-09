@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" data-theme="parchment">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Narayan Shanku | Blog on BI, analytics, and systems." />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Narayan Shanku | Blog</title>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar" data-elevate>
+      <div class="wrap topbar-inner">
+        <a class="seal" href="index.html" aria-label="Go to home">
+          <span class="seal-mark" aria-hidden="true"></span>
+          <span class="seal-text">Narayan Shanku</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+            <span class="sr-only">Open menu</span>
+            <span class="toggle-lines" aria-hidden="true"></span>
+          </button>
+
+          <div class="nav-menu" id="nav-menu">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link is-active" href="blog.html">Blog</a>
+
+            <button class="mode" type="button" aria-label="Toggle appearance">
+              <span class="mode-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3v2"></path>
+                  <path d="M12 19v2"></path>
+                  <path d="M4.22 4.22l1.42 1.42"></path>
+                  <path d="M18.36 18.36l1.42 1.42"></path>
+                  <path d="M3 12h2"></path>
+                  <path d="M19 12h2"></path>
+                  <path d="M4.22 19.78l1.42-1.42"></path>
+                  <path d="M18.36 5.64l1.42-1.42"></path>
+                  <circle cx="12" cy="12" r="4"></circle>
+                </svg>
+              </span>
+              <span class="mode-text">Mode</span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="roman">I</p>
+            <h1 class="section-title">Blog</h1>
+            <p class="section-sub">
+              Notes on BI, analytics, dashboards, data modeling, and building systems that don’t lie.
+            </p>
+          </header>
+
+          <div class="blog-controls card reveal">
+            <div class="blog-row">
+              <label class="field blog-field">
+                <span class="label">Search</span>
+                <input class="input" id="blog-search" type="text" placeholder="Search posts by title or tag" />
+              </label>
+
+              <label class="field blog-field">
+                <span class="label">Tag</span>
+                <select class="input" id="blog-tag">
+                  <option value="">All</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div id="blog-list" class="blog-list"></div>
+
+          <div id="blog-empty" class="card reveal" style="display:none;">
+            <h3 class="card-title">No posts found</h3>
+            <p class="card-text">Try a different search term or tag.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-inner">
+        <p class="foot-text">© <span id="year"></span> Narayan Shanku. Quiet thoughts, loud data.</p>
+        <a class="foot-link" href="index.html">Home</a>
+      </div>
+    </footer>
+
+    <script src="blog.js" defer></script>
+  </body>
+</html>
